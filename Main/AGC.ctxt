@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=AGC
+comment0.text=\r\n\ Advanced\ GPA\ Calculator\r\n\r\n\ @author\ Ryan\ A.\ Rodriguez\r\n\ @version\ Development\ 1\ (1/20/2019)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=double\ Interface()
+comment3.params=calculationType\ filename
+comment3.target=double\ classCaller(int,\ java.lang.String)
+numComments=4
