@@ -3,16 +3,15 @@ import java.io.PrintWriter;
 import java.io.File;
 import java.util.Scanner;
 import java.io.*;
-import java.util.concurrent.TimeUnit;
 /**
- * Component 1. HarvardUNWeightedGPA Calculator
+ * Calculates unweighted gpa in broward county
  *
  * @author Ryan A. Rodriguez
- * @version Last Revised 1/20/2019
+ * @version Last revised 1/20/2019
  */
-public class HarvardUNweighted
+public class BrowardUNWeighted
 {
-    public static double harvardUNweightedCalculator(String fileName) throws IOException,InterruptedException{
+    public static double BrowardUNWeightedCalculator(String fileName) throws IOException,InterruptedException{
         File transcript = new File(fileName);
         Scanner inTxtFile = new Scanner(transcript);
         double unWeightedGPA = 0.0;
@@ -21,11 +20,11 @@ public class HarvardUNweighted
         
         // Settings
         double A_Level = 4.0;
-        double Bplus_Level = 3.3;
+        double Bplus_Level = 3.0;
         double B_Level = 3.0;
-        double Cplus_Level = 2.3;
+        double Cplus_Level = 2.0;
         double C_Level = 2.0;
-        double Dplus_Level = 1.3;
+        double Dplus_Level = 1.0;
         double D_Level = 1.0;
         double F_Level = 0.0;
         
@@ -70,7 +69,7 @@ public class HarvardUNweighted
           Thread.sleep(50);
           counter++;
     }
-    
+    inTxtFile.close();
     return (unWeightedGPA / counter);
 }
     

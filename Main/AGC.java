@@ -5,28 +5,29 @@ import java.io.PrintWriter;
  * Advanced GPA Calculator
  *
  * @author Ryan A. Rodriguez
- * @version Development 1 (1/20/2019)
+ * @version Release 1.0 (1/21/2019)
  */
 public class AGC
 {
     
     
-    public static void main (String[] args) throws IOException{
+    public static void main (String[] args) throws IOException,InterruptedException{
     System.out.println(Interface());
         
         
     }
     
-    public static double Interface() throws IOException{
+    public static double Interface() throws IOException,InterruptedException{
         System.out.println("<><><><><><><><><><><><><><><><><><><><><><>");
         System.out.printf("%-8s", "Advanced GPA Calculator \n");
-        System.out.printf("%-8s", "Version: DEV 1.0 \n");
+        System.out.printf("%-8s", "Version: 1 \n");
         System.out.println("<><><><><><><><><><><><><><><><><><><><><><> \n");
         Scanner in = new Scanner(System.in);
         
         
-        System.out.println("[1] Convert to Harvard UNweighted GPA scale");
-        
+        System.out.println("[1] Convert to College UNweighted GPA scale");
+        System.out.println("[2] Convert to Broward UNweighted GPA scale");
+        System.out.println("[3] Convert to Broward Weighted GPA scale");
         int interfaceInput = in.nextInt();
         
         System.out.println("What file name?");
@@ -36,11 +37,21 @@ public class AGC
         return GPA;
     }
     
-    public static double classCaller(int calculationType, String filename)throws IOException{
+    public static double classCaller(int calculationType, String filename)throws IOException,InterruptedException{
      
         if (calculationType == 1) {
             HarvardUNweighted calc = new HarvardUNweighted();
-            double GPA = calc.harvardUNweightedCalculater(filename);
+            double GPA = calc.harvardUNweightedCalculator(filename);
+            return GPA;
+        }
+        if (calculationType == 2) {
+            BrowardUNWeighted calc = new BrowardUNWeighted();
+            double GPA = calc.BrowardUNWeightedCalculator(filename);
+            return GPA;
+        }
+        if (calculationType == 3) {
+            BrowardWeighted calc = new BrowardWeighted();
+            double GPA = calc.BrowardWeightedCalculator(filename);
             return GPA;
         }
         
