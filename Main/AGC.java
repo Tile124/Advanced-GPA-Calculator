@@ -59,4 +59,11 @@ public class AGC
         return 0.0;
     }
     
+    public static void endStatement(){
+        System.out.println("What would you like to do now?");
+        System.out.println("[1] Calculate amount of Honors Classes needed ");
+        System.out.println("[2] ");
+        System.out.println("[3] Convert to Broward Weighted GPA scale");
+    }
+    
 }
