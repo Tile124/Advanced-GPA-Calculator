@@ -12,8 +12,10 @@ public class AGC
     
     
     public static void main (String[] args) throws IOException,InterruptedException{
-    System.out.println(Interface());
-        
+    // Enable only for testing
+        while(true == true) {
+        System.out.println(Interface());
+    }
         
     }
     
@@ -28,17 +30,23 @@ public class AGC
         System.out.println("[1] Convert to College UNweighted GPA scale");
         System.out.println("[2] Convert to Broward UNweighted GPA scale");
         System.out.println("[3] Convert to Broward Weighted GPA scale");
+        System.out.println("[4] Determine amount of Honors classes needed to get an A");
+        System.out.println("[9] Terminate Program");
         int interfaceInput = in.nextInt();
         
         System.out.println("What file name?");
         String filename = in.next();
+        
+        // Enable only for testing mode only
+         if (filename.equals("a")) {filename = "RyanTranscript.txt";};
+         
         
         double GPA = classCaller(interfaceInput, filename);
         return GPA;
     }
     
     public static double classCaller(int calculationType, String filename)throws IOException,InterruptedException{
-     
+     Scanner in = new Scanner(System.in);
         if (calculationType == 1) {
             HarvardUNweighted calc = new HarvardUNweighted();
             double GPA = calc.harvardUNweightedCalculator(filename);
@@ -54,9 +62,24 @@ public class AGC
             double GPA = calc.BrowardWeightedCalculator(filename);
             return GPA;
         }
+        if (calculationType == 4) {
+            System.out.println("[1]Weighted or [2]UnWeighted?");
+            int calcType = in.nextInt();
+            System.out.println("Desired GPA");
+            double desiredGPA = in.nextDouble();
+            if (calcType == 2 && desiredGPA > 4.0) {
+                System.out.println("Bro please enter a realistic unweighted gpa");
+                System.exit(0);
+            }
+            HonorsCalculation honorsCalc = new HonorsCalculation();
+            int honorsClassesNeeded = honorsCalc.HonorsClassesNeeded(filename, calcType, desiredGPA);
+        }
+        if (calculationType == 9) {
+            System.exit(0);
+        }
         
         
-        return 0.0;
+        return -1.001;
     }
     
     public static void endStatement(){

@@ -1,33 +1,28 @@
-
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.File;
+import java.util.Scanner;
+import java.io.*;
 /**
- * Write a description of class HonorsCalculation here.
+ * Determines amount of Honors classes needed to achieve a certain GPA
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Ryan A. Rodriguez 
+ * @version 1 (2/1/2019)
  */
 public class HonorsCalculation
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class HonorsCalculation
-     */
-    public HonorsCalculation()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public static int HonorsClassesNeeded(String fileName, int type, double desiredGPA) throws IOException, InterruptedException {
+        BrowardWeighted weightedAccessPanel = new BrowardWeighted();
+        double classes = weightedAccessPanel.lineFinder(fileName);
+        double WeightedGPA = weightedAccessPanel.BrowardWeightedCalculator(fileName);
+        int additionalClassCount = 0;
+        while (WeightedGPA < desiredGPA) {
+            classes += 1;
+            WeightedGPA += 5;
+            WeightedGPA = WeightedGPA / classes;
+            additionalClassCount++;
+        }
+        
+        return additionalClassCount;
     }
 }

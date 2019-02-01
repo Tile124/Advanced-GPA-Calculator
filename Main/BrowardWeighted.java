@@ -61,22 +61,28 @@ public class BrowardWeighted
             System.out.println(" Regular"); 
             }else if (classType == 1) {
             System.out.println(" Local Honors");
-            if (tempGrade.equals("A") || tempGrade.equals("B+") || tempGrade.equals("B") || tempGrade.equals("C+") || tempGrade.equals("C")){
+            if (tempGrade.equals("A") || tempGrade.equals("B") || tempGrade.equals("C")){
                 WeightedGPA += 1.0;
+            }else if ( tempGrade.equals("B+") || tempGrade.equals("C+")) {
+                WeightedGPA += 1.5;
             }
             }else if (classType == 2) {
                 System.out.println(" Honors");
-                if (tempGrade.equals("A") || tempGrade.equals("B+") || tempGrade.equals("B") || tempGrade.equals("C+") || tempGrade.equals("C")){
+                if (tempGrade.equals("A") || tempGrade.equals("B") || tempGrade.equals("C")){
                 WeightedGPA += 1.0;
+            }else if ( tempGrade.equals("B+") || tempGrade.equals("C+")) {
+                WeightedGPA += 1.5;
             }
                 
             }else if (classType == 3) {
                 System.out.println(" AP / Dual Enrollment");
-                if (tempGrade.equals("A") || tempGrade.equals("B+") || tempGrade.equals("B") || tempGrade.equals("C+") || tempGrade.equals("C")){
+                if (tempGrade.equals("A") || tempGrade.equals("B") || tempGrade.equals("C")){
                 WeightedGPA += 2.0;
+            }else if ( tempGrade.equals("B+") || tempGrade.equals("C+")) {
+                WeightedGPA += 2.5;
             }
             }
-          Thread.sleep(50);
+          Thread.sleep(25);
           counter++;
     }
     inTxtFile.close();
