@@ -39,7 +39,7 @@ public class AGC
         
         // Enable only for testing mode only
          if (filename.equals("a")) {filename = "RyanTranscript.txt";};
-         
+         if (filename.equals("b")) {filename = "RyanTranscriptFuture.txt";};
         
         double GPA = classCaller(interfaceInput, filename);
         return GPA;

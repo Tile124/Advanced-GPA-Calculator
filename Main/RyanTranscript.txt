@@ -37,7 +37,7 @@ AP_Computer_Science_Principles A 3
 AP_Computer_Science_Principles A 3
 Jrotc_2 A 0
 Jrotc_2 A 0
-AP_Psych B 3
+AP_Psych B+ 3
 AP_Psych B+ 3
 AP_US_History B 3
 AP_English B 3
@@ -49,4 +49,4 @@ Marketing_Management A 1
 Criminal_Law A 3
 AP_CSA A 3
 Jrotc_3 A 1
-Missing_Class A 1
+Missing_Class A 0
