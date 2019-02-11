@@ -30,7 +30,7 @@ public class AGC
         System.out.println("[1] Convert to College UNweighted GPA scale");
         System.out.println("[2] Convert to Broward UNweighted GPA scale");
         System.out.println("[3] Convert to Broward Weighted GPA scale");
-        System.out.println("[4] Determine amount of Honors classes needed to get an A");
+        System.out.println("[4] Determine amount of Honors classes needed to get specific GPA");
         System.out.println("[9] Terminate Program");
         int interfaceInput = in.nextInt();
         
@@ -38,8 +38,8 @@ public class AGC
         String filename = in.next();
         
         // Enable only for testing mode only
-         if (filename.equals("a")) {filename = "RyanTranscript.txt";};
-         if (filename.equals("b")) {filename = "RyanTranscriptFuture.txt";};
+         if (filename.equals("a")) {filename = ("RyanTranscript.txt");};
+         if (filename.equals("b")) {filename = ("RyanTranscriptFuture.txt");};
         
         double GPA = classCaller(interfaceInput, filename);
         return GPA;
@@ -72,7 +72,9 @@ public class AGC
                 System.exit(0);
             }
             HonorsCalculation honorsCalc = new HonorsCalculation();
+            System.out.println("Called HonorsCalculation");
             int honorsClassesNeeded = honorsCalc.HonorsClassesNeeded(filename, calcType, desiredGPA);
+            return honorsClassesNeeded;
         }
         if (calculationType == 9) {
             System.exit(0);

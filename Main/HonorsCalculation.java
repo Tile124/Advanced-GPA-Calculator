@@ -16,11 +16,16 @@ public class HonorsCalculation
         double classes = weightedAccessPanel.lineFinder(fileName);
         double WeightedGPA = weightedAccessPanel.BrowardWeightedCalculator(fileName);
         int additionalClassCount = 0;
+        double rawScore = (WeightedGPA * classes);
+        double newRawScore = rawScore;
+        System.out.println("Current GPA: "+ WeightedGPA);
         while (WeightedGPA < desiredGPA) {
+            System.out.println("Loop "+ additionalClassCount);
             classes += 1;
-            WeightedGPA += 5;
-            WeightedGPA = WeightedGPA / classes;
+            newRawScore += 6;
+            WeightedGPA = newRawScore / classes;
             additionalClassCount++;
+            System.out.println(WeightedGPA);
         }
         
         return additionalClassCount;
