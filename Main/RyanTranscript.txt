@@ -1,52 +1,68 @@
-English_1 B 2
-English_1 B+ 2
-Spanish_1 B 0
-Spanish_1 A 0
-Spanish_2 B 0
-Spanish_2 A 0
-Biology_1 B 2
-Biology_1 B 2
-Digitial_Info_tech A 1
-Digital_info_tech A 1
-Culinary_1 B 0
-Culinary_1 B 0
-Marketing_Essentials B+ 0
-Marketing_Essentials B 0
-World_History A 2
-Jrotc_1 A 0
-Jrotc_1 A 0
-World_Cultural_Geography B+ 1
-World_Cultural_Geography B 1
-English_2 A 2
-English_2 A 2
-Algebra_1 B 0
-Algebra_1 B 0
-Algebra_2 A 2
-Geometry A 2
-Geometry A 2
-Chemistry A 2
-Chemistry B 2
-Culinary_2 A 0
-Culinary_2 A 0
-Culinary_3 A 2
-Culinary_3 A 2
-Marketing_Applications A 1
-Marketing_Applications A 1
-World_History A 2
-AP_Computer_Science_Principles A 3
-AP_Computer_Science_Principles A 3
-Jrotc_2 A 0
-Jrotc_2 A 0
-AP_Psych B+ 3
-AP_Psych B+ 3
-AP_US_History B 3
-AP_English B 3
-College_Algebra A 3
-College_Algebra A 3
-Algebra_2 A 2
-Pre_Cal B+ 2
-Marketing_Management A 1
-Criminal_Law A 3
-AP_CSA A 3
-Jrotc_3 A 1
-Missing_Class A 0
+English_1 B 2 Y
+English_1 B+ 2 Y
+Spanish_1 B 0 Y
+Spanish_1 A 0 Y
+Spanish_2 B 0 Y
+Spanish_2 A 0 Y
+Biology_1 B 2 Y
+Biology_1 B 2 Y
+Digitial_Info_tech A 1 N
+Digital_info_tech A 1 N
+Culinary_1 B 0 N
+Culinary_1 B 0 N
+Marketing_Essentials B+ 0 N
+Marketing_Essentials B 0 N
+World_History A 2 Y
+Jrotc_1 A 0 N
+Jrotc_1 A 0 N
+Driver_ED A 0 N
+World_Cultural_Geography B+ 1 Y
+World_Cultural_Geography B 1 Y
+English_2 A 2 Y
+English_2 A 2 Y
+Algebra_1 B 0 Y
+Algebra_1 B 0 Y
+Algebra_2 A 2 Y
+Geometry A 2 Y
+Geometry A 2 Y
+Chemistry A 2 Y
+Chemistry B 2 Y
+Culinary_2 A 0 N
+Culinary_2 A 0 N
+Culinary_3 A 2 N
+Culinary_3 A 2 N
+Marketing_Applications A 1 N
+Marketing_Applications A 1 N
+World_History A 2 Y
+AP_Computer_Science_Principles A 3 N
+AP_Computer_Science_Principles A 3 N
+Jrotc_2 A 0 N
+Jrotc_2 A 0 N
+AP_Psych B+ 3 Y
+AP_Psych B 3 Y
+AP_USH A 3 Y
+AP_USH B 3 Y
+AP_Micro A 3 Y
+AP_Macro B+ 3 Y
+AP_ENG B 3 Y
+AP_ENG B 3 Y
+Col_Alg A 3 Y
+Col_Alg A 3 Y
+BusCal A 3 Y
+BusCal A 3 Y
+Alg2 A 2 Y
+Precal A 2 Y
+Precal B+ 2 Y
+HLP1081C A 3 N
+MUL2010 A 3 Y
+AP_BIO A 3 Y
+Marketing3 A 1 N
+Marketing3 A 1 N
+CSIT A 2 N
+CSIT A 2 N
+Crim_Law A 3 N
+Aessentials A 3 N
+AP_CSA A 3 N
+AP_CSA A 3 N
+JROTC3 A 1 N
+JROTC3 A 1 N

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=HonorsCalculation
-comment0.text=\n\ Determines\ amount\ of\ Honors\ classes\ needed\ to\ achieve\ a\ certain\ GPA\n\n\ @Ryan\ A.\ Rodriguez\ \n\ @version\ 1\ (2/1/2019)\n
+comment0.text=\r\n\ Determines\ amount\ of\ Honors\ classes\ needed\ to\ achieve\ a\ certain\ GPA\r\n\r\n\ @Ryan\ A.\ Rodriguez\ \r\n\ @version\ 1\ (2/1/2019)\r\n
 comment1.params=fileName\ type\ desiredGPA
 comment1.target=int\ HonorsClassesNeeded(java.lang.String,\ int,\ double)
 numComments=2

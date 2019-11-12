@@ -30,7 +30,7 @@ public class BrowardWeighted
         
         while (counter != lines){
           String currentCourse = inTxtFile.next();
-          System.out.print("Loaded: " + currentCourse);
+        //  System.out.print("Loaded: " + currentCourse);
           
           String tempGrade = inTxtFile.next();
           
@@ -58,16 +58,16 @@ public class BrowardWeighted
           int classType = inTxtFile.nextInt();
           
           if (classType == 0) {
-            System.out.println(" Regular"); 
+           // System.out.println(" Regular"); 
             }else if (classType == 1) {
-            System.out.println(" Local Honors");
+            //System.out.println(" Local Honors");
             if (tempGrade.equals("A") || tempGrade.equals("B") || tempGrade.equals("C")){
                 WeightedGPA += 1.0;
             }else if ( tempGrade.equals("B+") || tempGrade.equals("C+")) {
                 WeightedGPA += 1.5;
             }
             }else if (classType == 2) {
-                System.out.println(" Honors");
+                //System.out.println(" Honors");
                 if (tempGrade.equals("A") || tempGrade.equals("B") || tempGrade.equals("C")){
                 WeightedGPA += 1.0;
             }else if ( tempGrade.equals("B+") || tempGrade.equals("C+")) {
@@ -75,17 +75,21 @@ public class BrowardWeighted
             }
                 
             }else if (classType == 3) {
-                System.out.println(" AP / Dual Enrollment");
+               // System.out.println(" AP / Dual Enrollment");
                 if (tempGrade.equals("A") || tempGrade.equals("B") || tempGrade.equals("C")){
                 WeightedGPA += 2.0;
             }else if ( tempGrade.equals("B+") || tempGrade.equals("C+")) {
                 WeightedGPA += 2.5;
             }
+            
             }
-          Thread.sleep(25);
+          //Thread.sleep(25);
+          String ignore = inTxtFile.next();
           counter++;
     }
     inTxtFile.close();
+    System.out.println("DEV: Raw GPACount = " + WeightedGPA);
+    System.out.println("DEV: Raw ClassCount " + counter);
     return (WeightedGPA / counter);
 }
     

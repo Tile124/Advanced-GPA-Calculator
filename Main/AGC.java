@@ -5,7 +5,7 @@ import java.io.PrintWriter;
  * Advanced GPA Calculator
  *
  * @author Ryan A. Rodriguez
- * @version Release 1.0 (1/21/2019)
+ * @version Release 1.0 (11/01/2019)
  */
 public class AGC
 {
@@ -13,6 +13,14 @@ public class AGC
     
     public static void main (String[] args) throws IOException,InterruptedException{
     // Enable only for testing
+        System.out.println("[1] Convert to College UNweighted GPA scale");
+        System.out.println("[2] Convert to Broward UNweighted GPA scale");
+        System.out.println("[3] Convert to Broward Weighted GPA scale");
+        System.out.println("[4] Convert to Broward Academic Core (Always Weighted)");
+        System.out.println("[5] (NEW) Determine amount of Honors classes needed to get specific GPA");
+        System.out.println("[9] Terminate Program");
+        System.out.println("NOTE: YOU ARE CURRENTLY IN DEVELOPMENT MODE. MOST OF THE GUI HAS BEEN OMMITED FOR TESTING");
+        System.out.println("DEV MODE: Input A = RYANTRANSCRIPT.TXT ||| B = RYANTRANSCRIPTFUTURE.TXT");
         while(true == true) {
         System.out.println(Interface());
     }
@@ -20,21 +28,15 @@ public class AGC
     }
     
     public static double Interface() throws IOException,InterruptedException{
-        System.out.println("<><><><><><><><><><><><><><><><><><><><><><>");
-        System.out.printf("%-8s", "Advanced GPA Calculator \n");
-        System.out.printf("%-8s", "Version: 1 \n");
-        System.out.println("<><><><><><><><><><><><><><><><><><><><><><> \n");
+        //System.out.println("<><><><><><><><><><><><><><><><><><><><><><>");
+        //System.out.printf("%-8s", "Advanced GPA Calculator \n");
+        //System.out.printf("%-8s", "Version: 1 \n");
+        //System.out.println("<><><><><><><><><><><><><><><><><><><><><><> \n");
         Scanner in = new Scanner(System.in);
-        
-        
-        System.out.println("[1] Convert to College UNweighted GPA scale");
-        System.out.println("[2] Convert to Broward UNweighted GPA scale");
-        System.out.println("[3] Convert to Broward Weighted GPA scale");
-        System.out.println("[4] Determine amount of Honors classes needed to get specific GPA");
-        System.out.println("[9] Terminate Program");
+        System.out.println("------------------");
+        System.out.println("Calc_type:");
         int interfaceInput = in.nextInt();
-        
-        System.out.println("What file name?");
+        System.out.println("File:");
         String filename = in.next();
         
         // Enable only for testing mode only
@@ -48,8 +50,8 @@ public class AGC
     public static double classCaller(int calculationType, String filename)throws IOException,InterruptedException{
      Scanner in = new Scanner(System.in);
         if (calculationType == 1) {
-            HarvardUNweighted calc = new HarvardUNweighted();
-            double GPA = calc.harvardUNweightedCalculator(filename);
+            CollegeUNweighted calc = new CollegeUNweighted();
+            double GPA = calc.CollegeUNweightedCalculator(filename);
             return GPA;
         }
         if (calculationType == 2) {
@@ -63,6 +65,11 @@ public class AGC
             return GPA;
         }
         if (calculationType == 4) {
+            BrowardAcademicCore calc = new BrowardAcademicCore();
+            double GPA = calc.BrowardAcademicCore(filename);
+            return GPA;
+        }
+        if (calculationType == 5) {
             System.out.println("[1]Weighted or [2]UnWeighted?");
             int calcType = in.nextInt();
             System.out.println("Desired GPA");

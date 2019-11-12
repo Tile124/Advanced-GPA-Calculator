@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BrowardWeighted
-comment0.text=\n\ Calculates\ weighted\ gpa\ in\ broward\ county\n\n\ @author\ Ryan\ A.\ Rodriguez\n\ @version\ Last\ revised\ 1/20/2019\n
+comment0.text=\r\n\ Calculates\ weighted\ gpa\ in\ broward\ county\r\n\r\n\ @author\ Ryan\ A.\ Rodriguez\r\n\ @version\ Last\ revised\ 1/20/2019\r\n
 comment1.params=fileName
 comment1.target=double\ BrowardWeightedCalculator(java.lang.String)
 comment2.params=fileName

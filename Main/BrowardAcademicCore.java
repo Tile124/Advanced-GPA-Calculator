@@ -4,18 +4,19 @@ import java.io.File;
 import java.util.Scanner;
 import java.io.*;
 /**
- * Calculates unweighted gpa in broward county
+ * Calculates *Weighted* Academic Core GPA in Broward County
  *
  * @author Ryan A. Rodriguez
- * @version Last revised 11/01/2019
+ * @version Last revised 1/20/2019
  */
-public class BrowardUNWeighted
+public class BrowardAcademicCore
 {
-    public static double BrowardUNWeightedCalculator(String fileName) throws IOException,InterruptedException{
+    public static double BrowardAcademicCore(String fileName) throws IOException,InterruptedException{
         File transcript = new File(fileName);
         Scanner inTxtFile = new Scanner(transcript);
         double unWeightedGPA = 0.0;
         int counter = 0;
+        int classCounter = 0;
         int lines = lineFinder(fileName);
         
         // Settings
@@ -30,10 +31,12 @@ public class BrowardUNWeighted
         
         while (counter != lines){
           String currentCourse = inTxtFile.next();
-         // System.out.print("Loaded: " + currentCourse);
+         // System.out.println("Loaded: " + currentCourse);
           
           String tempGrade = inTxtFile.next();
-          
+          int classType = inTxtFile.nextInt();
+          String academic = inTxtFile.next();
+          if (academic.equals("Y")){
           if (tempGrade.equals("A")){
                unWeightedGPA += A_Level;
             }else if (tempGrade.equals("B+")){
@@ -55,26 +58,18 @@ public class BrowardUNWeighted
              System.out.println("Restart program and fix error");
              System.exit(0);
             }
-          int classType = inTxtFile.nextInt();
-          /*
-          if (classType == 0) {
-            System.out.println(" Regular");  
-            }else if (classType == 1) {
-            System.out.println(" Local Honors");  
-            }else if (classType == 2) {
-                System.out.println(" Honors");  
-            }else if (classType == 3) {
-                System.out.println(" AP / Dual Enrollment");  
+            
+            if ((classType == 2) || (classType == 3)) {
+            unWeightedGPA += 0.5;
             }
-          Thread.sleep(5);
-          */
-         String ignore = inTxtFile.next();
+            classCounter++;
+        }
           counter++;
     }
     inTxtFile.close();
     System.out.println("DEV: Raw GPACount = " + unWeightedGPA);
-    System.out.println("DEV: Raw ClassCount " + counter);
-    return (unWeightedGPA / counter);
+    System.out.println("DEV: Raw ClassCount " + classCounter);
+    return (unWeightedGPA / classCounter);
 }
     
     public static int lineFinder(String fileName) throws IOException{

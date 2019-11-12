@@ -5,14 +5,14 @@ import java.util.Scanner;
 import java.io.*;
 import java.util.concurrent.TimeUnit;
 /**
- * Component 1. HarvardUNWeightedGPA Calculator
+ * Calculus the GPA that is used my most colleges.
  *
  * @author Ryan A. Rodriguez
- * @version Last Revised 1/20/2019
+ * @version Last Revised 11/01/2019
  */
-public class HarvardUNweighted
+public class CollegeUNweighted
 {
-    public static double harvardUNweightedCalculator(String fileName) throws IOException,InterruptedException{
+    public static double CollegeUNweightedCalculator(String fileName) throws IOException,InterruptedException{
         File transcript = new File(fileName);
         Scanner inTxtFile = new Scanner(transcript);
         double unWeightedGPA = 0.0;
@@ -31,7 +31,7 @@ public class HarvardUNweighted
         
         while (counter != lines){
           String currentCourse = inTxtFile.next();
-          System.out.print("Loaded: " + currentCourse);
+          //System.out.print("Loaded: " + currentCourse);
           
           String tempGrade = inTxtFile.next();
           
@@ -59,15 +59,18 @@ public class HarvardUNweighted
           int classType = inTxtFile.nextInt();
           
           if (classType == 0) {
-            System.out.println(" Regular");  
+            //System.out.println(" Regular");  
             }else if (classType == 1) {
-            System.out.println(" Local Honors");  
+            //System.out.println(" Local Honors");  
             }else if (classType == 2) {
-                System.out.println(" Honors");  
+                //System.out.println(" Honors");
+                unWeightedGPA += 0.5;
             }else if (classType == 3) {
-                System.out.println(" AP / Dual Enrollment");  
+                //System.out.println(" AP / Dual Enrollment");  
+                unWeightedGPA += 1;
             }
-          Thread.sleep(50);
+          //Thread.sleep(5);
+          String ignore = inTxtFile.next();
           counter++;
     }
     

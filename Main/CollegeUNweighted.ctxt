@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=CollegeUNweighted
+comment0.text=\r\n\ Calculus\ the\ GPA\ that\ is\ used\ my\ most\ colleges.\r\n\r\n\ @author\ Ryan\ A.\ Rodriguez\r\n\ @version\ Last\ Revised\ 11/01/2019\r\n
+comment1.params=fileName
+comment1.target=double\ CollegeUNweightedCalculator(java.lang.String)
+comment2.params=fileName
+comment2.target=int\ lineFinder(java.lang.String)
+numComments=3
