@@ -1,17 +1,10 @@
-------------------------------------------------------------------------
-Project still in development
-------------------------------------------------------------------------
-
 PROJECT TITLE: Advanced GPA Calculator
-PURPOSE OF PROJECT: A powerful tool for high school academic planning
-VERSION or DATE: V1 1/21/2019
+PURPOSE OF PROJECT: A tool for high school academic planning
+VERSION or DATE: 5/09/2020
 HOW TO START THIS PROJECT: Run AGC.java
 AUTHORS: Ryan A. Rodriguez
+
 USER INSTRUCTIONS:
-
-To create transcript:
-Create text file, MAKE SURE THERE ARE NO STRAY LINES OR BLANKS
-
 To create a course entry:
 
 <Class_name> <Grade> <course type>
